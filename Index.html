@@ -10,141 +10,178 @@
 
 
 <body>
+    <p><h1>MichinDelicatessen Restaurant</h1></p>
     <img src="assets/Michin.jpg" alt="Logo de Michin Delicatessen" class="logo">
-    <h1>MichinDelicatessen Restaurant</h1>
+   
+    <form id="formPedido">
+        <div class="contenedor-principal">
 
-<div class="contenedor-principal">
+            <!-- COLUMNA 1 -->
+            <div class="contenedor1">
+                <p><h2>Informacion del Cliente</h2></p>
+                <fieldset>
+                    <legend>Registra tus Datos</legend>
 
-    <div class="contenedor1">
-        <p>Realiza tu pedido</p>
+                    <label for="nombre">👩🏻‍🤝‍👨🏼 Nombre</label>
+                    <input type="text" id="nombre" name="nombre"
+                        placeholder="Ingrese su nombre" required>
 
-        <form id="formPedido" action="#" method="post">
-            <fieldset>
-                <legend>INFORMACION DEL CLIENTE</legend>
+                    <label for="telefono">📱 Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono"
+                        placeholder="Ingrese su número telefónico" required>
 
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre"
-                    placeholder="Ingrese su Nombre" required>
+                    <label for="direccion">🏠 Dirección</label>
+                    <textarea id="direccion" name="direccion"
+                        placeholder="Dirección de entrega completa"
+                        required></textarea>
+                </fieldset>
+            </div>
 
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono"
-                    placeholder="Ingrese su numero teléfonico" required>
+            <!-- COLUMNA 2 -->
+            <div class="contenedor2">
+                <p><h2>Informacion del Pedido</h2></p>
+                <fieldset>
+                    <legend>Realiza tu Pedido</legend>
 
-                <label for="direccion">Dirección</label>
-                <textarea id="direccion" name="direccion"
-                        placeholder="Dirección de entrega completa" required></textarea>
-            </fieldset>
+                    <label for="sopas">🍲 Sopas</label>
+                    <select id="sopas" name="sopas">
+                        <option value="">Seleccione...</option>
+                        <option value="Ajiaco">Ajiaco</option>
+                        <option value="Changua">Changua</option>
+                        <option value="Sancocho de Pescado">Sancocho de Pescado</option>
+                        <option value="Caldo de Costilla">Caldo de Costilla</option>
+                        <option value="Sopa de Pasta">Sopa de Pasta</option>
+                        <option value="Sopa de Verduras">Sopa de Verduras</option>
+                        <option value="Crema de Pollo">Crema de Pollo</option>
+                    </select>
 
-            <fieldset>
-                <legend>SOPAS</legend>
-                <select id="sopas" name="sopas">
-                    <option value="">Seleccione...</option>
-                    <option value="Ajiaco">Ajiaco</option>
-                    <option value="Changua">Changua</option>
-                    <option value="SancochoPescado">Sancocho de Pescado</option>
-                    <option value="CaldoCostilla">Caldo de Costilla</option>
-                    <option value="SopaPasta">Sopa de Pasta</option>
-                    <option value="SopaVerduras">Sopa de Verduras</option>
-                    <option value="CremaPollo">Crema de Pollo</option>
-                </select>
-            </fieldset>
+                    <label for="platos">🍝 Plato Principal</label>
+                    <select id="platos" name="platos">
+                        <option value="">Seleccione...</option>
+                        <option value="Bandeja Paisa">Bandeja Paisa</option>
+                        <option value="Arroz con pollo">Arroz con pollo</option>
+                        <option value="Pollo Sudado">Pollo Sudado</option>
+                        <option value="Pollo Asado">Pollo Asado</option>
+                        <option value="Churrasco">Churrasco</option>
+                        <option value="Pechuga Gratinada">Pechuga Gratinada</option>
+                        <option value="Hamburguesa">Hamburguesa</option>
+                        <option value="Pizza">Pizza</option>
+                    </select>
 
-            <fieldset>
-                <legend>PLATO PRINCIPAL</legend>
-                <select id="platos" name="platos">
-                    <option value="">Seleccione...</option>
-                    <option value="Bandeja Paisa">Bandeja Paisa</option>
-                    <option value="Arrozpollo">Arroz con pollo</option>
-                    <option value="PolloSudado">Pollo Sudado</option>
-                    <option value="PolloAsado">Pollo Asado</option>
-                    <option value="Churrasco">Churrasco</option>
-                    <option value="PechugaGratinada">Pechuga Gratinada</option>
-                    <option value="Hamburguesa">Hamburguesa</option>
-                    <option value="Pizza">Pizza</option>
-                    <option value="EnsaladaFrutas">Ensalada de Frutas</option>
-                </select>
-            </fieldset>
+                    <label for="bebidas">☕ Bebidas</label>
+                    <select id="bebidas" name="bebidas">
+                        <option value="">Seleccione...</option>
+                        <option value="Gaseosa">Gaseosa</option>
+                        <option value="Jugo Natural">Jugo Natural</option>
+                        <option value="Limonada Natural">Limonada Natural</option>
+                        <option value="Cerveza Nacional">Cerveza Nacional</option>
+                        <option value="Cafe">Café</option>
+                        <option value="Agua">Agua</option>
+                    </select>
 
-            <fieldset>
-                <legend>BEBIDAS</legend>
-                <select id="bebidas" name="bebidas">
-                    <option value="">Seleccione...</option>
-                    <option value="Gaseosa">Gaseosa</option>
-                    <option value="JugoNatural">Jugo Natural</option>
-                    <option value="LimonadaNatural">Limonada Natural</option>
-                    <option value="CervezaNacional">Cerveza Nacional</option>
-                    <option value="Cafe">Cafe</option>
-                    <option value="Agua">Agua</option>
-                </select>
-            </fieldset>
+                     <label for="postres">🍨 Postres</label>
+                    <select id="postres" name="postres">
+                        <option value="">Seleccione...</option>
+                        <option value="Bola de Helado">Bola de Helado</option>
+                        <option value="Cheesecake">Cheesecake</option>
+                        <option value="Flan">Flan</option>
+                        <option value="Postre de TresLeches">Postre de TresLeches</option>
+                        <option value="Torta de Chocolate">Torta de Chocolate</option>
+                        <option value="Creappe">Creappe</option>
+                        <option value="Waffle">Waffle</option>
+                    </select>
 
-            <fieldset>
-                <legend>ADICIONALES</legend>
+                    <label for="adicionales">🥙 Adicionales</label>
                     <select id="adicionales" name="adicionales">
-                    <option value="">Seleccione...</option>
-                    <option value="PapasFritas">Papas Fritas</option>
-                    <option value="PapasCriollas">Papas Criollas</option>
-                    <option value="Ensalada">Ensalada del huerto</option>
-                    <option value="Huevo">Huevo Frito</option>
-                    <option value="Guacamole">Guacamole</option>
-                    <option value="Salsas">Salsas Extra</option>
-                    <option value="Aji">Aji</option>
-                </select>
-            </fieldset>
+                        <option value="">Seleccione...</option>
+                        <option value="Papas Fritas">Papas Fritas</option>
+                        <option value="Papas Criollas">Papas Criollas</option>
+                        <option value="Ensalada">Ensalada del huerto</option>
+                        <option value="Huevo">Huevo Frito</option>
+                        <option value="Guacamole">Guacamole</option>
+                    </select>
 
-            <fieldset>
-                <legend>POSTRES</legend>
-                <select id="postres" name="postres">
-                    <option value="">Seleccione...</option>
-                    <option value="Helado">Bola de Helado</option>
-                    <option value="CrepeDulce">Crepe Dulce</option>
-                    <option value="CrepeSal">Crepe de Sal</option>
-                    <option value="Waffle">Waffle</option>
-                    <option value="Milhoja">Milhoja</option>
-                    <option value="Cheesecake">Cheesecake</option>
-                    <option value="Flan">Flan</option>
-                    <option value="TresLeches">Tres Leches</option>
-                    <option value="TortaChocolate">Torta de Chocolate</option>
-                </select>
-            </fieldset>
+                    <label for="observaciones">Observaciones</label>
+                    <textarea id="observaciones" name="observaciones"
+                        placeholder="Escriba aquí alguna indicación adicional..."></textarea>
+                </fieldset>
+            </div>
 
-            <fieldset>
-                <legend>OBSERVACIONES</legend>
-                <textarea id="observaciones" name="observaciones"
-                        placeholder="Escriba aquí alguna indicación..."></textarea>
-            </fieldset>
+            <!-- COLUMNA 3 -->
+            <div class="contenedor3">
+                <p><h2>Resumen del Pedido</h2></p>
+                <div id="resumenPedido"></div>
+                <p id="mensaje"></p>
+                <input type="submit" id="btnEnviar" value="Enviar Pedido">
+            </div>
+        </div>
+    </form>
 
-            <input type="submit" value="Enviar Pedido">
-        </form>
-
-        <p id="mensaje"></p>
-
-    </div>
-
-    <div class="contenedor2">
-        <p>Resumen de tu pedido</p>
-    </div>
-</div>
-
-
-
-<script>
-    document.getElementById("formPedido").addEventListener("submit", function(event) {
+    <script>
+        document.getElementById("formPedido").addEventListener("submit", function(event) {
         event.preventDefault();
 
-        document.getElementById("mensaje").innerHTML = `
-            <p>✅ Pedido enviado correctamente. Gracias por tu compra.</p>
-            <p>🕒 Tu pedido llegará aproximadamente en 20 minutos.</p>
-        `;
-
         const formulario = this;
+        const boton = document.getElementById("btnEnviar");
 
-        setTimeout(function() {
-            formulario.reset();
-            document.getElementById("mensaje").innerHTML = "";
-        }, 5000);
-    });
-</script>
-  
+        // Obtener datos del cliente
+            const nombre = document.getElementById("nombre").value;
+            const telefono = document.getElementById("telefono").value;
+            const direccion = document.getElementById("direccion").value;
+
+        // Obtener selección del pedido
+            const sopa = document.getElementById("sopas").value;
+            const plato = document.getElementById("platos").value;
+            const bebida = document.getElementById("bebidas").value;
+            const adicional = document.getElementById("adicionales").value;
+            const postre = document.getElementById("postres").value;
+            const observaciones = document.getElementById("observaciones").value.trim();
+
+
+        // Construir resumen
+            let resumen = `
+                <p><strong>👩🏻‍🤝‍👨🏼 Cliente:</strong> ${nombre}</p>
+                <p><strong>📱 Teléfono:</strong> ${telefono}</p>
+                <p><strong>🏠 Dirección:</strong> ${direccion}</p>
+                <hr>
+                <p></p>
+            `;
+
+        // Mostrar únicamente lo seleccionado
+            if (sopa) {resumen += `<p><strong>🍲 Sopa:</strong> ${sopa}</p>`;}
+            if (plato) {resumen += `<p><strong>🍝 Plato Principal:</strong> ${plato}</p>`;}
+            if (bebida) {resumen += `<p><strong>☕ Bebida:</strong> ${bebida}</p>`;}
+            if (postre) {resumen += `<p><strong>🍨 Postre:</strong> ${postre}</p>`;}
+            if (adicional) {resumen += `<p><strong>🥙 Adicional:</strong> ${adicional}</p>`;}
+            if (observaciones) {resumen += `<p><strong>Observaciones:</strong> ${observaciones}</p>
+                <hr>
+                <p></p>`;}
+         
+        // Mostrar resumen
+            document.getElementById("resumenPedido").innerHTML = resumen;
+
+        // Deshabilitar el botón
+            boton.disabled = true;
+            boton.value = "Enviando pedido...";
+
+        // Mostrar mensaje
+            document.getElementById("mensaje").innerHTML = `
+            <p>Pedido procesado correctamente 👨🏻‍🍳✅</p>
+            <p>Tu pedido llegará aproximadamente en 20 minutos 🏍️🕒</p>
+            <p>Gracias por tu compra ❤️</p>
+        `;
+        // Esperar 10 segundos
+            setTimeout(function() {
+                formulario.reset();
+                document.getElementById("mensaje").innerHTML = "";
+                document.getElementById("resumenPedido").innerHTML = "";
+
+            // Habilitar nuevamente el botón
+            boton.disabled = false;
+            boton.value = "Enviar Pedido";
+
+        }, 15000);
+        });
+    </script>
 </body>
 </html>
