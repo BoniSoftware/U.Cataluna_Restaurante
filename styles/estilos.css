@@ -14,7 +14,23 @@ body{
     margin: 0 auto;
     border-radius:30px;
 }
-.contenedor{
+.contenedor-principal {
+    display: flex;
+    gap: 30px;              /* Espacio entre columnas */
+    align-items: flex-start;
+    padding: 20px;
+}
+.contenedor1{
+    flex: 1;
+    width:600px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,.2);
+}
+.contenedor2{
+    flex: 2;
     width:600px;
     margin:40px auto;
     background:white;
