@@ -24,15 +24,15 @@
 
                     <label for="nombre">👩🏻‍🤝‍👨🏼 Nombre</label>
                     <input type="text" id="nombre" name="nombre"
-                        placeholder="Ingrese su nombre" required>
+                        placeholder="Ingrese su nombre (Campo Requerido)" required>
 
                     <label for="telefono">📱 Teléfono</label>
                     <input type="tel" id="telefono" name="telefono"
-                        placeholder="Ingrese su número telefónico" required>
+                        placeholder="Ingrese su número telefónico (Campo Requerido)" required>
 
                     <label for="direccion">🏠 Dirección</label>
                     <textarea id="direccion" name="direccion"
-                        placeholder="Dirección de entrega completa"
+                        placeholder="Dirección de entrega completa (Campo Requerido)"
                         required></textarea>
                 </fieldset>
             </div>
@@ -137,14 +137,32 @@
             const postre = document.getElementById("postres").value;
             const observaciones = document.getElementById("observaciones").value.trim();
 
+        // Obtener fecha y hora del pedido
+            const fechaHoraActual = new Date();
+
+            const fechaPedido = fechaHoraActual.toLocaleDateString('es-CO', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+
+            const horaPedido = fechaHoraActual.toLocaleTimeString('es-CO', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
 
         // Construir resumen
+            const fechaHoraPedido = fechaHoraActual.toLocaleString('es-CO');
+
             let resumen = `
+                <p><strong>📅 Pedido registrado:</strong> ${fechaHoraPedido}</p>
+                <hr><p></p>
+
                 <p><strong>👩🏻‍🤝‍👨🏼 Cliente:</strong> ${nombre}</p>
                 <p><strong>📱 Teléfono:</strong> ${telefono}</p>
                 <p><strong>🏠 Dirección:</strong> ${direccion}</p>
-                <hr>
-                <p></p>
+                <hr><p></p>
             `;
 
         // Mostrar únicamente lo seleccionado
@@ -153,9 +171,7 @@
             if (bebida) {resumen += `<p><strong>☕ Bebida:</strong> ${bebida}</p>`;}
             if (postre) {resumen += `<p><strong>🍨 Postre:</strong> ${postre}</p>`;}
             if (adicional) {resumen += `<p><strong>🥙 Adicional:</strong> ${adicional}</p>`;}
-            if (observaciones) {resumen += `<p><strong>Observaciones:</strong> ${observaciones}</p>
-                <hr>
-                <p></p>`;}
+            if (observaciones) {resumen += `<p><strong>Observaciones:</strong> ${observaciones}</p>`;}
          
         // Mostrar resumen
             document.getElementById("resumenPedido").innerHTML = resumen;
@@ -166,11 +182,12 @@
 
         // Mostrar mensaje
             document.getElementById("mensaje").innerHTML = `
+            <hr><p></p>
             <p>Pedido procesado correctamente 👨🏻‍🍳✅</p>
             <p>Tu pedido llegará aproximadamente en 20 minutos 🏍️🕒</p>
             <p>Gracias por tu compra ❤️</p>
         `;
-        // Esperar 10 segundos
+        // Esperar 15 segundos
             setTimeout(function() {
                 formulario.reset();
                 document.getElementById("mensaje").innerHTML = "";
