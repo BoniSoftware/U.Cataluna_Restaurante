@@ -126,14 +126,14 @@ document.getElementById("formPedido").addEventListener(
             "No hay productos seleccionados";
         totalElemento.textContent = "0";
 
-        // Esperar 20 segundos antes de limpiar mensaje
+        // Esperar 15 segundos antes de limpiar mensaje
         setTimeout(() => {
             const mensaje =
                 document.getElementById("mensaje");
             if (mensaje) {
                 mensaje.innerHTML = "";
             }
-        }, 14000);
+        }, 15000);
     }
 );
 
