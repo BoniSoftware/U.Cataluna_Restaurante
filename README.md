@@ -1,4 +1,6 @@
 
+AUTOR:  Carlos Andres Bonilla
+
 MichinDelicatessen Restaurant es una aplicación web diseñada para optimizar el proceso de toma de 
 pedidos en un restaurante de alta cocina. Su interfaz gráfica permite registrar la información del cliente, 
 seleccionar productos organizados por categorías (sopas, platos principales, bebidas, postres y adicionales) 
@@ -24,7 +26,6 @@ Características principales
 🗑️ Eliminación de pedidos individuales o del historial completo.
 📱 Diseño adaptable y fácil de utilizar.
 
-Objetivo de la aplicación
 El objetivo de Michin Delicatessen es ofrecer una solución digital que agilice el proceso de registro y gestión de pedidos 
 en un restaurante, reduciendo errores en la toma de órdenes, automatizando el cálculo de costos y proporcionando una experiencia 
 de usuario moderna, organizada y eficiente tanto para los clientes como para el personal del establecimiento.
