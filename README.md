@@ -13,7 +13,7 @@ realizados sin necesidad de una base de datos externa.
 Su diseño moderno, con imágenes, efectos visuales y una experiencia de usuario intuitiva, facilita el proceso de compra 
 y mejora la interacción entre el cliente y el restaurante.
 
-Características principales
+Características principales: 
 🐱 Diseño personalizado con la identidad gráfica de Michin Delicatessen.
 👤 Registro de datos del cliente.
 🍲 Selección de productos por categorías.
@@ -26,7 +26,7 @@ Características principales
 🗑️ Eliminación de pedidos individuales o del historial completo.
 📱 Diseño adaptable y fácil de utilizar.
 
-El objetivo de Michin Delicatessen es ofrecer una solución digital que agilice el proceso de registro y gestión de pedidos 
+El objetivo de MichinDelicatessen es ofrecer una solución digital que agilice el proceso de registro y gestión de pedidos 
 en un restaurante, reduciendo errores en la toma de órdenes, automatizando el cálculo de costos y proporcionando una experiencia 
 de usuario moderna, organizada y eficiente tanto para los clientes como para el personal del establecimiento.
 
